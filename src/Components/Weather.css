@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: 'Arial', Helvetica, sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.city input {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.city button {
+    padding: 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.city button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    text-align: center;
+    color: #ff4d4d;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.forecast-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.forecast-item:hover {
+    transform: scale(1.05);
+}
+
+.weather-image img {
+    width: 120px;
+    height: 120px;
+}
+
+.weather-temp {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.weather-date {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.weather-stats {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.wind, .humidity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.wind-icon, .humidity-icon {
+    margin-right: 10px;
+}
+
+body::before {
+    content: "";
+    background: url('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .city {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .city input, .city button {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .forecast-item {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .city input, .city button {
+        width: 90%;
+    }
+
+    .forecast-item {
+        width: 90%;
+    }
+}
